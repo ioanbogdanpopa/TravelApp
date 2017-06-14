@@ -5,14 +5,26 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.app.travel</groupId>
-    <artifactId>com.app.travel</artifactId>
+    <artifactId>travel-app</artifactId>
     <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>1.5.3.RELEASE</version>
+        <version>${spring.boot.version}</version>
     </parent>
+
+    <modules>
+        <module>app-webapp</module>
+        <module>app-model</module>
+        <module>app-service</module>
+    </modules>
+
+    <properties>
+        <java.version>1.8</java.version>
+        <spring.boot.version>1.5.3.RELEASE</spring.boot.version>
+    </properties>
 
     <dependencies>
         <dependency>
@@ -29,10 +41,6 @@
             <scope>test</scope>
         </dependency>
     </dependencies>
-
-    <properties>
-        <java.version>1.8</java.version>
-    </properties>
 
     <build>
         <plugins>
@@ -53,7 +61,5 @@
             </plugin>
         </plugins>
     </build>
-
-
 
 </project>
